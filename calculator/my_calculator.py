@@ -78,7 +78,7 @@ def stats_calculations(v1, v2, f):
 				new_v1 += [x_value] * freq
 			v1 = np.array(new_v1)
 
-		answer = [
+		stats_answers = [
 			f'Mean of x: {v1.mean()}',
 			f'Sum of x: {v1.sum()}',
 			f'Sum of squared x: {(v1**2).sum()}',
@@ -96,7 +96,7 @@ def stats_calculations(v1, v2, f):
 		]
 
 		if v2 is not None:
-			answer += [
+			stats_answers += [
 				f'Mean of y: {v2.mean()}',
 				f'Sum of y: {v2.sum()}',
 				f'Sum of squared y: {(v2**2).sum()}',
@@ -119,8 +119,8 @@ def stats_calculations(v1, v2, f):
 
 
 	toplevel = Toplevel()
-	answer_label = Label(toplevel, text='\n'.join(answer))
-	answer_label.pack()
+	stats_answers_label = Label(toplevel, text='\n'.join(stats_answers))
+	stats_answers_label.pack()
 
 
 # Functions for handling flow
