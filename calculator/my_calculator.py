@@ -3,7 +3,7 @@ import numpy as np
 
 
 root = Tk()
-root.title('Simple Calculator')
+root.title('My Calculator')
 root.iconbitmap('calculator_23810.icns')
 
 
