@@ -32,14 +32,11 @@ def equals_command():
 	current = e.get()
 	ac_command()
 	
-	# Tries to solve the current equation
+	# Tries to solve the current equation and if sucessful displays the answer on the main entry field
 	try:
-		answer = eval(current)
+		e.insert(0, eval(current))
 	except Exception as msg:
 		e.insert(0, msg)
-
-	# Displays answer on the main entry field
-	e.insert(0, answer)
 
 def frequency_checkbox_command():
 	"""This function adds/removes the frequency field in the stats mode depending on the state of the freq_checkbox checkbox. """
